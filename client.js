@@ -16,6 +16,9 @@ const connect = function () {
   conn.on('connect', () => {
     console.log('Successfully connected to snake server...');
     conn.write(`Name: ${name}`);
+    // setInterval(() => {
+    //   conn.write(`Move: up`);
+    // }, 50)
   });
 
   return conn;
