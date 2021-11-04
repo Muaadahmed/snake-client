@@ -1,11 +1,12 @@
 const net = require('net');
+const { IP, PORT} = require('./constants');
 const connect = function () {
   const conn = net.createConnection({
-    host: '165.227.47.243',
-    port: 50541 // PORT number here,
+    host: IP,
+    port: PORT // PORT number here,
   });
 
-  const name = 'COME AT ME BRO !!!!';
+  const name = 'Muaad'
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
@@ -15,7 +16,7 @@ const connect = function () {
 
   conn.on('connect', () => {
     console.log('Successfully connected to snake server...');
-    conn.write(`Say: ${name}`);
+    conn.write(`Name: ${name}`);
   });
 
   return conn;
