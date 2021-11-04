@@ -5,7 +5,7 @@ const connect = function () {
     port: 50541 // PORT number here,
   });
 
-  const name = 'MA';
+  const name = 'COME AT ME BRO !!!!';
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
@@ -15,7 +15,7 @@ const connect = function () {
 
   conn.on('connect', () => {
     console.log('Successfully connected to snake server...');
-    conn.write(`Name: ${name}`);
+    conn.write(`Say: ${name}`);
   });
 
   return conn;
